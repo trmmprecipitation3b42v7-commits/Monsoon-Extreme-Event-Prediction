@@ -145,7 +145,7 @@ o	Defines a create_sequences function:
 	Transforms the scaled data into the (samples, timesteps, features) 3D format required by LSTM models, using a sliding window approach (n_steps_in for input sequence length, n_steps_out for prediction horizon).
 o	Creates the LSTM input X_seq and target y_seq sequences.
 o	Performs a chronological train-test split (e.g., 80% for training, 20% for testing) to maintain the time series order.
-•	6. LSTM Model Definition and Training
+•	6. LSTM Model Definition and Training 
 o	Defines a Keras Sequential model: 
 	Includes multiple LSTM layers (e.g., with 100 units, relu activation), designed to learn long-term dependencies in the sequences.
 	Applies Dropout layers to prevent overfitting.
