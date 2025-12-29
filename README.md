@@ -1,3 +1,13 @@
+Section 	What to Include
+Title	    Multi-Scale Deep Learning Frameworks for Extreme Event Forecasting - Dr Ambika P S
+
+Abstract	The proposed approach integrates multi-scale wavelet decomposition for feature extraction, capturing both lowfrequency trends and high-frequency  extreme signatures utilising a Daubechies 6 wavelet filter for 6 levels of decomposition, along with the temporal learning capabilities of LSTMs.
+Methodology	Briefly mention the models used (LSTM, Transformer, etc.) and the data source.
+
+Installation	READ BELOW
+
+
+
 g4.areaAvgTimeSeries.TRMM_3B42RT_Daily_7_precipitation.2000030120191231.83E_20N_86E_23N.nc
 Source: TRMM 3B42RT Daily precipitation data
 •	Time range: March 1, 2000 to December 31, 2019
