@@ -2,9 +2,9 @@ Section 	What to Include
 Title	    Multi-Scale Deep Learning Frameworks for Extreme Event Forecasting - Dr Ambika P S
 
 Abstract	The proposed approach integrates multi-scale wavelet decomposition for feature extraction, capturing both lowfrequency trends and high-frequency  extreme signatures utilising a Daubechies 6 wavelet filter for 6 levels of decomposition, along with the temporal learning capabilities of LSTMs.
-Methodology	Briefly mention the models used (LSTM, Transformer, etc.) and the data source.
 
-Installation	READ BELOW
+
+
 
 
 
@@ -13,39 +13,8 @@ Source: TRMM 3B42RT Daily precipitation data
 •	Time range: March 1, 2000 to December 31, 2019
 •	Region: Area average over 83°E-86°E and 20°N-23°N (likely a region in South Asia)
 •	Operation: Area-averaged time series
-•	D:\Ambika\IIT madras\python\ReFine\ReFine-1\ARIMATemperature_Forecasting\trmm_trial\ncfile_trmm.ipynb: 
-Basic time series plot, Monthly climatology, Annual cycle with interannual variability, climatology, seasonal decomposition
-•	Time Series Plot: Shows the full daily precipitation record
-•	Monthly Climatology: Average precipitation for each month across all years
-•	Annual Cycle: Shows each year's pattern plus the overall climatology
-•	Basic Statistics: Calculates key precipitation metrics
-•	Seasonal Decomposition (optional): Separates trend, seasonality, and residuals
-•	SPATIAL CLUSTERING
-•	To perform spatial clustering of TRMM precipitation data, you'll need gridded (not area-averaged) data. Your current file (g4.areaAvgTimeSeries...nc) contains only time series data for one region, so you'll need to download the full spatial dataset.
-•	Required Variables for Spatial Clustering
-o	Precipitation data (3D: time × lat × lon)
-o	Latitude coordinate vector
-o	Longitude coordinate vector
-o	Time coordinate vector
-•	Optional but Useful:
-o	Quality flags (if available)
-o	Elevation data (can help explain spatial patterns)
-•	Downloading the Proper TRMM Data
-•	Option 1: Download from NASA GES DISC
-o	https://disc.gsfc.nasa.gov/datasets/TRMM_3B42_Daily_7/summary
-•	Select parameters:
-o	Product: TRMM_3B42_Daily (or 3B42RT for real-time)
-o	Date range
-o	Spatial domain (or global)
-o	Download options: NetCDF format
-o	Daily or monthly resolution
-o	Full spatial grid (not area-averaged)
-•	ERROR: SITE UNDER MAINTENANCE
-•	A good page on what IMERG algorithm does: https://climatedataguide.ucar.edu/climate-data/gpm-global-precipitation-measurement-mission
-•	TO download .nc files from multiple urls in a text file: https://medium.com/@xhl272703370/tutorial-on-how-to-download-multiple-earthdata-urls-78c96df4c1c7
-•	 
-•	subset_GPM_3IMERGDF_07_20250516_184632_
-•	IMERG Final Run Daily V07B (GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree V07 (GPM_3IMERGDF)) data file is excellent for spatial clustering analysis. Here's why and how to use it:
+
+
 •	________________________________________
 •	Why This Data is Good for Spatial Clustering
 o	High Spatial Resolution: 0.1° × 0.1° grid (~11 km at equator) - Fine enough to capture regional precipitation patterns. provides precipitation estimates on a uniform global grid of 0.1° latitude × 0.1° longitude. Each grid cell represents the estimated precipitation for that specific spatial box (~11 km at the equator). It preserves the spatial variability across the domain.
@@ -53,6 +22,8 @@ o	Temporal Resolution: Daily data balances noise reduction while preserving spat
 o	Data Quality: Final Run (V07B) = Gauge-corrected, research-grade quality.
 o	Uses precipitationCal variable (most accurate rainfall estimate).
 •	Global Coverage:60°N-60°S (includes most land areas where clustering is useful).
+
+
 Attribute	Description
 Product Name	GPM_3IMERGDF
 Spatial Resolution	0.1° × 0.1° (~11 km grid)
@@ -62,12 +33,7 @@ Data Type	Gridded
 Units	mm/day (millimeters per day)
 Processing Level	Level 3 (Merged, gap-filled, validated)
 
-•	Key Variables for Clustering
-o	Variable	               Description	              Unit	      Use for Clustering?
-o	precipitationCal	Bias-corrected precipitation	mm/h	✅ Primary variable
-o	precipitationUncal	Satellite-only estimate	mm/h	❌ Less accurate
-o	probabilityLiquidPrecipitation	Rain likelihood	%	❌ Auxiliary
-o	qualityIndex	Data quality (0-1)	unitless	✅ Filter low-quality data
+
 •	Why spatial clustering:
 o	https://kazumatsuda.medium.com/spatial-clustering-fa2ea5d035a3
 •	How single .nc4 file looks ike:
@@ -104,9 +70,11 @@ Attributes:
 	
 TRMM data is a single .nc file with precipitation values alone. That suggests the TRMM data might be area-averaged over South Asia/India, so it doesn't have spatial dimensions. On the other hand, GPM IMERG data has multiple files with precipitation, lat, and lon variables, meaning it's a grid covering a larger area, and the user needs to subset it to the region of interest (South Asia/India).
 
+
+
 17-june-2025
 
-a step-by-step breakdown of the entire process described in your Python code D:\Ambika\IITmadras\python\ReFine\ReFine-1\ARIMA-Temperature_Forecasting\trmm_trial\db4waveletdecomp.ipynb presented as bullet points:
+a step-by-step breakdown of the entire process :
 ________________________________________
 Step-by-Step Procedure of the Extreme Precipitation Prediction Code
 •	1. Initial Setup & Data Loading
