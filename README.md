@@ -8,7 +8,7 @@ Predicting extreme precipitation is challenging due to the highly non-linear and
 
 By combining Discrete Wavelet Transforms (DWT) for denoising and LSTMs for temporal memory, the architecture captures both long-term climate trends and high-frequency extreme "signatures."
 
-![Overview of methodology](images/Methodology.png)
+![Overview of methodology](plots/Methodology.png)
 
 
 📊 Dataset Specifications
