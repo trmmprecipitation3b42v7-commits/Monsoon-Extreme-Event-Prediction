@@ -55,3 +55,6 @@ pip install numpy pandas pywavelets scikit-learn tensorflow matplotlib
 Error Metrics: The model is evaluated using MAE and RMSE on a chronological 20% test split.
 
 Performance: The hybrid reconstruction approach significantly reduces "chatter" in the predictions while accurately capturing the magnitude of high-intensity rainfall events compared to vanilla LSTM models.
+
+![Actual vs Predicted Precipitation for Baseline LSTM](plots/comparisonbaselineLSTM.png)
+![Actual vs Predicted Precipitation for Wavelet based LSTM LSTM](plots/comparisonWLSTM.png)
