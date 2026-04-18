@@ -1,5 +1,8 @@
 Multi-Scale Deep Learning for Extreme Monsoon Event Forecasting
+
+
 Hybrid Wavelet-LSTM Framework for High-Frequency Precipitation Modeling
+
 📌 Project Overview
 Predicting extreme precipitation is challenging due to the highly non-linear and "noisy" nature of environmental signals. This project implements a Multi-Scale Feature Engineering pipeline that decomposes 20 years of satellite data into frequency components before training a Deep Learning model.
 
